@@ -1,10 +1,10 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class TTT {
+public class TTTTextVersion {
 	private String[][] grid = new String[3][3];
 
-	public TTT() {
+	public TTTTextVersion() {
 
 	}
 
@@ -15,7 +15,7 @@ public class TTT {
 		System.out.println("2 - Tails");
 		int choice = input.nextInt();
 		int coinFlip = generator.nextInt(2) + 1;
-		TTT game = new TTT();
+		TTTTextVersion game = new TTTTextVersion();
 		game.setBoard();
 		boolean userTurn;
 		boolean compFirstTurn = false;

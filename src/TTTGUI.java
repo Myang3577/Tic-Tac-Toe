@@ -5,7 +5,6 @@ import java.io.*;
 
 public class TTTGUI extends JPanel implements Fields {
 
-	private boolean playerFirst;
 	private JFrame frame;
 	private TTTButton[] buttons = new TTTButton[9];
 	private String[][] grid = new String[3][3];
@@ -21,8 +20,6 @@ public class TTTGUI extends JPanel implements Fields {
 		this.frame = frame;
 
 		setLayout(new FlowLayout(FlowLayout.LEFT, PADDING, PADDING));
-
-		this.playerFirst = playerFirst;
 
 		for (int i = 0; i < 9; i++) {
 			TTTButton button = new TTTButton(i + 1);
@@ -85,10 +82,6 @@ public class TTTGUI extends JPanel implements Fields {
 		button.setBackground(Color.white);
 		button.setBorder(null);
 		button.setFont(Lato_Light);
-	}
-
-	public void setTurn(boolean playerTurn) {
-		this.playerFirst = playerTurn;
 	}
 
 	public void computerFirstChoice() {
